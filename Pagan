@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Jörð",
+    "pantheon": "Norse",
+    "title": "The Earth Mother",
+    "element": "Soil & Roots",
+    "offering": "Pour fresh, cool water directly onto bare earth, or plant native wildflower seeds.",
+    "devotional": "Walk barefoot on the earth today. Feel the weight of the soil supporting your steps, and remember that your body is physically made of the ground beneath you."
+  },
+  {
+    "id": 2,
+    "name": "Cernunnos",
+    "pantheon": "Celtic",
+    "title": "The Horned Lord",
+    "element": "Deep Forests & Wildlife",
+    "offering": "Leave a small handful of wild berries, acorns, or raw nuts at the base of an old oak tree.",
+    "devotional": "Sit quietly near a tree today. Listen to the wind moving through the leaves. Acknowledge the wild, untamed life thriving just outside your doorstep."
+  },
+  {
+    "id": 3,
+    "name": "Artemis",
+    "pantheon": "Greek",
+    "title": "Mistress of the Wilderness",
+    "element": "The Moon & Wild Animals",
+    "offering": "Light a silver candle, pour a small cup of goat's milk or honey, or pick up litter along a trail.",
+    "devotional": "Step outside tonight and look up at the moon. Stand in total silence for two minutes, tuning your ears to the sounds of nocturnal nature around you."
+  },
+  {
+    "id": 4,
+    "name": "Osiris",
+    "pantheon": "Egyptian",
+    "title": "Lord of Agriculture & Rebirth",
+    "element": "Vegetation & Cycles",
+    "offering": "Sprout small barley or wheat seeds at home, or offer fresh green grapes.",
+    "devotional": "Notice something in your environment that is decaying or changing (like fallen leaves turning to mulch). Reflect on how nature uses endings to feed new beginnings."
+  },
+  {
+    "id": 5,
+    "name": "Pan",
+    "pantheon": "Greek",
+    "title": "God of the Wilds",
+    "element": "Flocks, Pastures & Meadows",
+    "offering": "Pour a small amount of sweet wine onto the grass, or play a musical instrument outdoors.",
+    "devotional": "Find an open green space or meadow today. Take three deep breaths, letting go of your daily worries, and allow yourself to feel the raw, unfiltered joy of being alive."
+  },
+  {
+    "id": 6,
+    "name": "Veles",
+    "pantheon": "Slavic",
+    "title": "Lord of the Underworld & Waters",
+    "element": "Earth, Water & Forests",
+    "offering": "Leave a small piece of dark bread or a pour of mead on a flat stone near flowing water.",
+    "devotional": "Visit a natural body of water today—a river, stream, or lake. Watch the current flow and imagine it carrying away any stagnant energy or stress you are holding."
+  },
+  {
+    "id": 7,
+    "name": "Danu",
+    "pantheon": "Celtic",
+    "title": "The Primordial Waters",
+    "element": "Rivers & Flowing Streams",
+    "offering": "Drop clean, biodegradable flower petals into a flowing river or stream.",
+    "devotional": "As you drink water today, slow down and consciously feel it hydrating your body. Connect with the ancient truth that water flows through all living things on Earth."
+  }
+]
