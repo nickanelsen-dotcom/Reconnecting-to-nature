@@ -62,4 +62,30 @@
     "offering": "Drop clean, biodegradable flower petals into a flowing river or stream.",
     "devotional": "As you drink water today, slow down and consciously feel it hydrating your body. Connect with the ancient truth that water flows through all living things on Earth."
   }
-]
+]from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+import json
+import datetime
+
+app = FastAPI()
+
+# Allow your frontend web page to securely talk to this backend code
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+def load_data():
+    with open("deities.json", "r", encoding="utf-8") as file:
+        return json.load(file)
+
+@app.get("/api/daily-deity")
+def get_daily_deity():
+    deities = load_data()
+    # Automatically rotates the deity every single day
+    day_of_year = datetime.datetime.now().timetuple().tm_yday
+    deity_index = day_of_year % len(deities)
+    return deities[deity_index]
+
