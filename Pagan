@@ -62,6 +62,15 @@
     "offering": "Drop clean, biodegradable flower petals into a flowing river or stream.",
     "devotional": "As you drink water today, slow down and consciously feel it hydrating your body. Connect with the ancient truth that water flows through all living things on Earth."
   }
+text
+
+fastapi
+uvicorn
+
+text
+
+python-3.10.12
+
 ]from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import json
