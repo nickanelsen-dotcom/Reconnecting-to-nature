@@ -88,4 +88,76 @@ def get_daily_deity():
     day_of_year = datetime.datetime.now().timetuple().tm_yday
     deity_index = day_of_year % len(deities)
     return deities[deity_index]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoDeity - Daily Devotional</title>
+    <!-- Tailwind CSS for clean, rapid layout styling -->
+    <script src="https://tailwindcss.com"></script>
+</head>
+<body class="bg-[#0b130e] text-[#f4f6f4] min-h-screen flex flex-col items-center justify-center p-4">
+
+    <!-- Main Container -->
+    <div class="max-w-md w-full bg-[#132219] border border-[#233d2e] rounded-2xl p-6 shadow-2xl space-y-6">
+        
+        <!-- Header -->
+        <div class="text-center">
+            <span class="text-xs font-semibold tracking-widest text-[#a3b899] uppercase">Daily Connection</span>
+            <h1 id="deity-name" class="text-3xl font-serif font-bold text-[#e1ebe0] mt-1">Loading...</h1>
+            <p id="deity-title" class="text-sm italic text-[#8ca381] mt-0.5"></p>
+        </div>
+
+        <!-- Meta Tags / Labels -->
+        <div class="flex justify-between text-xs bg-[#0b130e] px-4 py-2 rounded-lg border border-[#1c3325]">
+            <div><span class="text-[#68825c]">Pantheon:</span> <span id="deity-pantheon" class="font-medium"></span></div>
+            <div><span class="text-[#68825c]">Domain:</span> <span id="deity-element" class="font-medium"></span></div>
+        </div>
+
+        <!-- Devotional Content -->
+        <div class="space-y-2">
+            <h3 class="text-sm font-semibold text-[#a3b899] uppercase tracking-wider">Today's Practice</h3>
+            <p id="deity-devotional" class="text-base leading-relaxed text-[#d2ded1] bg-[#1a2f22] p-4 rounded-xl border border-[#233d2e]"></p>
+        </div>
+
+        <!-- Offering Instruction -->
+        <div class="space-y-1">
+            <h4 class="text-xs font-semibold text-[#68825c] uppercase tracking-wider">Suggested Offering</h4>
+            <p id="deity-offering" class="text-sm text-[#a3b899]"></p>
+        </div>
+
+        <!-- Action / Unlock Premium Button -->
+        <button class="w-full py-3 bg-[#44624a] hover:bg-[#53785b] text-[#ffffff] font-medium rounded-xl transition duration-200 shadow-md">
+            Unlock Weekly Seasonal Rituals ($3/mo)
+        </button>
+    </div>
+
+    <!-- Live Data Dynamic Script -->
+    <script>
+        // Replace this URL with your actual backend address once you deploy to Render or Vercel
+        const API_URL = "http://127.0.0";
+
+        async function fetchDailyDeity() {
+            try {
+                const response = await fetch(API_URL);
+                const data = await response.json();
+                
+                document.getElementById('deity-name').innerText = data.name;
+                document.getElementById('deity-title').innerText = data.title;
+                document.getElementById('deity-pantheon').innerText = data.pantheon;
+                document.getElementById('deity-element').innerText = data.element;
+                document.getElementById('deity-devotional').innerText = data.devotional;
+                document.getElementById('deity-offering').innerText = data.offering;
+            } catch (error) {
+                console.error("Error loading data:", error);
+                document.getElementById('deity-name').innerText = "Nature Calls";
+                document.getElementById('deity-devotional').innerText = "Unable to load today's alignment. Step outside and look to the sky.";
+            }
+        }
+
+        fetchDailyDeity();
+    </script>
+</body>
+</html>
 
